@@ -135,14 +135,35 @@ layoutClass: gap-10
 
 ---
 
-# 具体例② DB運用
+# 具体例② rollback
 
-- Rails は rollback が便利で、ローカル検証がかなり楽
+- Rails は rollback が便利
+- ローカルでテーブル定義を試して戻すのがかなり楽
 - Hono + Drizzle ORM では rollback を運用で補う必要があった
-- 例: rollback 用 migration も一緒に作る仕組みを用意した
-- UUID を採用して、目視で追いづらくて後悔
-- default auto increment のありがたさを感じた
-- integer の unixtime も人間が読みづらく、datetime のありがたさを感じた
+- 例: migration と一緒に rollback 用 migration も作る仕組みを用意した
+
+<div class="mt-8 text-xl font-semibold text-orange-700">
+Rails の rollback は、開発速度にかなり効く
+</div>
+
+---
+
+# 具体例③ ID 設計
+
+- Hono では特に縛りがなかった
+- なんとなく UUID を採用した
+- でも、関連データを目視で追いづらくて後悔した
+- 個人的には default が auto increment の方がありがたかった
+- 最終的に `id + uuid` へ寄せるにしても、最初の default は強い
+
+---
+
+# 具体例④ timestamp
+
+- D1(SQLite) だったこともあり、あまり深く考えず unixtime(integer) を保存した
+- でも、人間が読むにはかなりつらい
+- 調査・分析・運用で日時が直感的にわからない
+- integer にも利点はあるけど、個人的には datetime の default がありがたい
 
 ---
 layout: center
