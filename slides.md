@@ -112,9 +112,6 @@ Rails のレール = 運用知見のプリセット
 </div>
 
 ---
-layout: two-cols
-layoutClass: gap-8
----
 
 # 具体例① log / masking
 
@@ -122,18 +119,10 @@ layoutClass: gap-8
 - でも、何をどう出すかは自分で決めて実装する必要がある
 - Rails は default でログが出る
 - log level の制御もしやすい
-
-::right::
-
-<div class="rounded-2xl bg-slate-50 p-4 border border-slate-200">
-<div class="font-bold mb-2">Rails にはマスキングまである</div>
-
-- `config/initializers/filter_parameter_logging.rb`
-- `password`, `email`, `secret` などをマスクできる
+- `config/initializers/filter_parameter_logging.rb` で `password`, `email`, `secret` などをマスクできる
 - Hono ではそこも自前実装になった
 
-  <img src="/images/log-masking-example.png" class="mt-4 rounded-xl shadow border border-gray-200 max-h-56 w-full object-contain" />
-</div>
+<img src="/images/log-masking-example.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
 
 ---
 
