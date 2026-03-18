@@ -12,7 +12,16 @@ mdc: true
 ---
 
 <style>
-.slidev-layout,
+:root {
+  color-scheme: light;
+}
+
+#slide-content,
+.slidev-layout {
+  background: #fffaf5 !important;
+  color: #111827 !important;
+}
+
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3,
@@ -23,15 +32,15 @@ mdc: true
 .slidev-layout li,
 .slidev-layout div,
 .slidev-layout span {
-  color: #111827;
+  color: #111827 !important;
 }
 
 .slidev-layout strong {
-  color: #0f172a;
+  color: #0f172a !important;
 }
 
 .slidev-layout code {
-  color: #b45309;
+  color: #b45309 !important;
 }
 </style>
 
