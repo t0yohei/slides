@@ -147,8 +147,6 @@ Rails の rollback は、開発速度にかなり効く
 </div>
 
 ---
-
----
 layout: two-cols
 layoutClass: gap-8
 ---
@@ -162,9 +160,10 @@ layoutClass: gap-8
 
 ::right::
 
-<div class="pt-10">
-  <img src="/images/uuid-example.png" class="rounded-xl shadow-lg border border-gray-200" />
-  <div class="text-sm opacity-70 mt-3">UUID は一意性には強いけど、目視追跡はかなりつらい</div>
+<div class="pt-2 space-y-4">
+  <img src="/images/uuid-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-52 mx-auto" />
+  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-52 mx-auto" />
+  <div class="text-sm opacity-70">UUID は一意性には強いけど、目視追跡はかなりつらい</div>
 </div>
 
 ---
