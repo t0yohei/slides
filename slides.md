@@ -170,9 +170,6 @@ layoutClass: gap-8
 </div>
 
 ---
-layout: two-cols
-layoutClass: gap-6
----
 
 # 具体例④ timestamp
 
@@ -181,10 +178,8 @@ layoutClass: gap-6
 - 調査・分析・運用で日時が直感的にわからない
 - integer にも利点はあるけど、個人的には datetime の default がありがたい
 
-::right::
-
-<div class="pt-0">
-  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-[30rem] w-full object-contain" />
+<div class="mt-6">
+  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-[22rem] w-full object-contain mx-auto" />
   <div class="text-sm opacity-70 mt-2">数字としては扱いやすくても、人間には読みにくい</div>
 </div>
 
