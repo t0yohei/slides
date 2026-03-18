@@ -164,8 +164,8 @@ layoutClass: gap-8
 ::right::
 
 <div class="pt-0 space-y-2">
+  <img src="/images/uuid-example-2.png" class="rounded-xl shadow-lg border border-gray-200 max-h-72 w-full object-contain mx-auto" />
   <img src="/images/uuid-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-72 w-full object-contain mx-auto" />
-  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-72 w-full object-contain mx-auto" />
   <div class="text-sm opacity-70">UUID は一意性には強いけど、目視追跡はかなりつらい</div>
 </div>
 
