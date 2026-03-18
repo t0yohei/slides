@@ -76,6 +76,9 @@ layout: section
 </div>
 
 ---
+layout: two-cols
+layoutClass: gap-12
+---
 
 # なぜ Hono を選んだのか
 
@@ -90,6 +93,10 @@ layout: section
 なので Hono を選択
 </div>
 
+::right::
+
+<img src="/images/hono_logo.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
+
 ---
 layout: two-cols
 layoutClass: gap-12
@@ -99,7 +106,7 @@ layoutClass: gap-12
 
 - Rails では自然にできていたことが、自然には起きない
 - 仕組みは用意されていても、設計は自分でやる必要がある
-- その差が、少人数開発ではじわじわ効く
+- その差が、少人数開発ではじわじわ効いてくる
 
 ::right::
 
@@ -133,7 +140,7 @@ Rails のレール = 運用知見のプリセット
 - 例: migration と一緒に rollback 用 migration も作る仕組みを用意した
 
 <div class="mt-4 text-xl font-semibold text-orange-700">
-Rails の rollback は、開発速度にかなり効く
+Rails の rollback は、開発速度にかなり効果的
 </div>
 
 <img src="/images/rollback-example.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[16rem] w-full object-contain mx-auto" />
