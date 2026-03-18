@@ -63,10 +63,16 @@ class: text-center
 
 # t0yohei について
 
-<div class="mt-8 text-left inline-block text-xl leading-10">
-- Ruby / Rails を使ったプロダクト開発が好き
-- 普段は Web アプリケーション開発をしている
-- 今回は Cloudflare + Hono で新規開発してみた
+<div class="mt-8 grid grid-cols-[180px_1fr] gap-8 items-center text-left">
+  <div>
+    <img src="/images/profile.jpg" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
+  </div>
+  <div class="text-xl leading-10">
+    <div>- Ruby / Rails を使ったプロダクト開発が好き</div>
+    <div>- 普段は Web アプリケーション開発をしている</div>
+    <div>- 最近は OpenClaw にかなりハマっている</div>
+    <div>- 今回は Cloudflare + Hono で新規開発してみた</div>
+  </div>
 </div>
 
 <div class="mt-10 text-lg opacity-80">
