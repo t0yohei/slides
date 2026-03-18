@@ -160,9 +160,9 @@ layoutClass: gap-8
 
 ::right::
 
-<div class="pt-2 space-y-4">
-  <img src="/images/uuid-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-52 mx-auto" />
-  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-52 mx-auto" />
+<div class="pt-0 space-y-3">
+  <img src="/images/uuid-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-64 w-full object-contain mx-auto" />
+  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-64 w-full object-contain mx-auto" />
   <div class="text-sm opacity-70">UUID は一意性には強いけど、目視追跡はかなりつらい</div>
 </div>
 
@@ -180,8 +180,8 @@ layoutClass: gap-8
 
 ::right::
 
-<div class="pt-10">
-  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200" />
+<div class="pt-2">
+  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-96 w-full object-contain" />
   <div class="text-sm opacity-70 mt-3">数字としては扱いやすくても、人間には読みにくい</div>
 </div>
 
