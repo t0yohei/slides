@@ -99,6 +99,17 @@ layout: section
 </div>
 
 ---
+
+# サービス構成図
+
+<img src="/images/kodatelog-architecture.svg" class="mt-6 rounded-2xl shadow-lg border border-gray-200 max-h-[32rem] w-full object-contain mx-auto" />
+
+<div class="mt-4 text-sm opacity-75">
+Pages + Workers + D1 + R2 を基本に、AI機能と監視を後ろに載せている
+</div>
+
+
+---
 layout: two-cols
 layoutClass: gap-12
 ---
@@ -119,6 +130,7 @@ layoutClass: gap-12
 ::right::
 
 <img src="/images/hono_logo.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
+
 
 ---
 layout: two-cols

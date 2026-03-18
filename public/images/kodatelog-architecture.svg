@@ -1,0 +1,64 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="32" fill="#FFF9F5"/>
+  <text x="90" y="105" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">サービス構成図</text>
+  <text x="90" y="145" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="22">Cloudflare を基盤に、AI機能と監視を載せた構成</text>
+
+  <!-- user -->
+  <rect x="90" y="330" width="180" height="110" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="180" y="378" text-anchor="middle" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">User</text>
+  <text x="180" y="412" text-anchor="middle" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="18">利用者</text>
+
+  <!-- frontend -->
+  <rect x="370" y="235" width="320" height="140" rx="28" fill="#ECFDF5" stroke="#10B981" stroke-width="3"/>
+  <text x="530" y="285" text-anchor="middle" fill="#065F46" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Frontend</text>
+  <text x="530" y="322" text-anchor="middle" fill="#065F46" font-family="Inter, Arial, sans-serif" font-size="22">Nuxt</text>
+  <text x="530" y="352" text-anchor="middle" fill="#047857" font-family="Inter, Arial, sans-serif" font-size="18">Cloudflare Pages</text>
+
+  <!-- backend -->
+  <rect x="370" y="445" width="320" height="140" rx="28" fill="#EFF6FF" stroke="#3B82F6" stroke-width="3"/>
+  <text x="530" y="495" text-anchor="middle" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Backend API</text>
+  <text x="530" y="532" text-anchor="middle" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="22">Hono</text>
+  <text x="530" y="562" text-anchor="middle" fill="#2563EB" font-family="Inter, Arial, sans-serif" font-size="18">Cloudflare Workers</text>
+
+  <!-- D1 -->
+  <rect x="860" y="175" width="250" height="120" rx="26" fill="#FEF3C7" stroke="#F59E0B" stroke-width="3"/>
+  <text x="985" y="225" text-anchor="middle" fill="#92400E" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">D1</text>
+  <text x="985" y="260" text-anchor="middle" fill="#B45309" font-family="Inter, Arial, sans-serif" font-size="18">properties / users</text>
+
+  <!-- R2 -->
+  <rect x="860" y="340" width="250" height="120" rx="26" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="3"/>
+  <text x="985" y="390" text-anchor="middle" fill="#6D28D9" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">R2</text>
+  <text x="985" y="425" text-anchor="middle" fill="#7C3AED" font-family="Inter, Arial, sans-serif" font-size="18">property images</text>
+
+  <!-- OpenAI -->
+  <rect x="860" y="505" width="250" height="120" rx="26" fill="#FCE7F3" stroke="#EC4899" stroke-width="3"/>
+  <text x="985" y="555" text-anchor="middle" fill="#BE185D" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">OpenAI</text>
+  <text x="985" y="590" text-anchor="middle" fill="#DB2777" font-family="Inter, Arial, sans-serif" font-size="18">AI advice / autofill</text>
+
+  <!-- Sentry -->
+  <rect x="1250" y="340" width="220" height="120" rx="26" fill="#F5F3FF" stroke="#6366F1" stroke-width="3"/>
+  <text x="1360" y="390" text-anchor="middle" fill="#4338CA" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Sentry</text>
+  <text x="1360" y="425" text-anchor="middle" fill="#4F46E5" font-family="Inter, Arial, sans-serif" font-size="18">frontend / backend</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#9CA3AF"/>
+    </marker>
+  </defs>
+  <line x1="270" y1="385" x2="370" y2="305" stroke="#9CA3AF" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="530" y1="375" x2="530" y2="445" stroke="#9CA3AF" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="690" y1="515" x2="860" y2="235" stroke="#9CA3AF" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="690" y1="515" x2="860" y2="400" stroke="#9CA3AF" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="690" y1="515" x2="860" y2="565" stroke="#9CA3AF" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="690" y1="305" x2="1250" y2="390" stroke="#C4B5FD" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrow)"/>
+  <line x1="690" y1="515" x2="1250" y2="410" stroke="#C4B5FD" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrow)"/>
+
+  <!-- labels -->
+  <text x="318" y="328" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="16">browse / input</text>
+  <text x="545" y="418" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="16">API request</text>
+  <text x="753" y="345" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="16">data</text>
+  <text x="757" y="430" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="16">images</text>
+  <text x="734" y="595" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="16">AI</text>
+  <text x="975" y="720" text-anchor="middle" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="18">kodatelog architecture overview</text>
+</svg>
