@@ -99,7 +99,7 @@ layoutClass: gap-12
 
 ---
 
-# kodatelog のサービス構成
+# サービス構成図
 
 <img src="/images/kodatelog-architecture.svg" class="mt-6 rounded-2xl shadow-lg border border-gray-200 max-h-[32rem] w-full object-contain mx-auto" />
 
