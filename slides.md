@@ -57,6 +57,23 @@ t0yohei @Gotanda.rb#66
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+# t0yohei について
+
+<div class="mt-8 text-left inline-block text-xl leading-10">
+- Ruby / Rails を使ったプロダクト開発が好き
+- 普段は Web アプリケーション開発をしている
+- 今回は Cloudflare + Hono で新規開発してみた
+</div>
+
+<div class="mt-10 text-lg opacity-80">
+Rails を外してみたからこそ、Rails のレールの価値がよく見えた
+</div>
+
+---
 layout: section
 ---
 
