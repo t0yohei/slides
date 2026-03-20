@@ -22,8 +22,10 @@ layout: default
 
 # Decks
 
-- [Rails、お前だったのか。](/rails-omae-datta-no-ka/)  
-  decks/rails-omae-datta-no-ka/slides.md
+- [Rails、お前だったのか。](/rails-omae-datta-no-ka/)
+  - decks/rails-omae-datta-no-ka/slides.md
+- [Test Slide](/test-slide/)
+  - decks/test-slide/slides.md
 
 <div class="mt-10 text-sm opacity-60">
 新規追加: <code>npm run deck:new -- --slug your-deck-slug --title "Your Deck Title"</code>

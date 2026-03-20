@@ -7,6 +7,7 @@ Slidev ベースのスライド置き場。
 
 - `decks/<slug>/slides.md` - 各発表の本体
 - `decks/index/slides.md` - deck 一覧ページ（自動生成）
+- `decks/test-slide/slides.md` - 動作確認用のサンプル deck
 - `public/decks/<slug>/...` - その発表専用の画像や素材
 - `components/` - 複数 deck で使い回す Vue コンポーネント
 - `snippets/` - 共通で参照したいコード断片
@@ -92,3 +93,4 @@ npm run deck:new -- --slug ai-agent-night --title "AI Agent Night"
 
 - `index` - deck 一覧ページ
 - `rails-omae-datta-no-ka` - Rails、お前だったのか。
+- `test-slide` - 複数 deck 運用確認用のサンプル
