@@ -101,6 +101,18 @@ npm run deck:new -- --slug ai-agent-night --title "AI Agent Night"
 3. 共通化したいものだけ `components/` や `snippets/` に上げる
 4. deck 追加後は `npm run deck:index` か `npm run build:all` で一覧と routing を更新する
 
+## OGP / SNS カード
+
+deck 単位で OGP を付けるなら、各 `decks/<slug>/slides.md` の frontmatter に `seoMeta` を入れる。
+
+画像は `public/decks/<slug>/ogp.png` に置くと、GitHub Pages では次の URL で配信される。
+
+- `https://toyon-tech.github.io/slides/decks/<slug>/ogp.png`
+
+共有 URL は hash 付きの `#/1` ではなく、deck root を使う。
+
+- 例: `https://toyon-tech.github.io/slides/rails-omae-datta-no-ka/`
+
 ## GitHub Pages への deploy
 
 このリポジトリには `.github/workflows/deploy.yml` を置いてある。
