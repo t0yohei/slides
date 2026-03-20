@@ -109,7 +109,7 @@ function generateIndexDeck() {
   const decks = getDecks({ includeIndex: false }).map(getDeckMeta)
   const cards = decks.length
     ? decks
-        .map(({ slug, title }) => `- [${title}](${withBasePrefix(`/${slug}/`)})\n  - decks/${slug}/slides.md`)
+        .map(({ slug, title }) => `- [${title}](/${slug}/)\n  - decks/${slug}/slides.md`)
         .join('\n')
     : '- まだ deck はない'
 

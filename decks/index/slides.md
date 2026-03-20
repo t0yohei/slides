@@ -22,9 +22,9 @@ layout: default
 
 # Decks
 
-- [Rails、お前だったのか。](/slides/rails-omae-datta-no-ka/)
+- [Rails、お前だったのか。](/rails-omae-datta-no-ka/)
   - decks/rails-omae-datta-no-ka/slides.md
-- [Test Slide](/slides/test-slide/)
+- [Test Slide](/test-slide/)
   - decks/test-slide/slides.md
 
 <div class="mt-10 text-sm opacity-60">
