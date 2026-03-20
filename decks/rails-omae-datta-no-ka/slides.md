@@ -9,6 +9,7 @@ drawings:
 transition: slide-left
 duration: 10min
 mdc: true
+routerMode: hash
 ---
 
 <style>

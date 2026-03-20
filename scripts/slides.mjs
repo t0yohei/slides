@@ -85,7 +85,7 @@ function ensureDeck(slug, title) {
 
   writeFileSync(
     entry,
-    `---\ntheme: seriph\ntitle: ${title}\ninfo: |\n  ${title}\nclass: text-center\ndrawings:\n  persist: false\ntransition: slide-left\nmdc: true\n---\n\n# ${title}\n\n<div class="mt-8 text-xl opacity-70">subtitle</div>\n\n<div class="mt-14 text-lg opacity-60">t0yohei</div>\n\n---\nlayout: section\n---\n\n# Section\n\n---\n\n# Message\n\n- point 1\n- point 2\n- point 3\n\n---\nlayout: center\nclass: text-center\n---\n\n# Thank you\n`,
+    `---\ntheme: seriph\ntitle: ${title}\ninfo: |\n  ${title}\nclass: text-center\ndrawings:\n  persist: false\ntransition: slide-left\nmdc: true\nrouterMode: hash\n---\n\n# ${title}\n\n<div class="mt-8 text-xl opacity-70">subtitle</div>\n\n<div class="mt-14 text-lg opacity-60">t0yohei</div>\n\n---\nlayout: section\n---\n\n# Section\n\n---\n\n# Message\n\n- point 1\n- point 2\n- point 3\n\n---\nlayout: center\nclass: text-center\n---\n\n# Thank you\n`,
   )
 }
 
@@ -123,6 +123,7 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+routerMode: hash
 ---
 
 # Slide Deck Catalog
