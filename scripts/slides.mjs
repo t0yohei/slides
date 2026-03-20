@@ -171,8 +171,9 @@ if (command === 'build-all') {
   }
   for (const deck of allDecks) {
     const outDir = deck === defaultDeck ? 'dist' : path.join('dist', deck)
-    console.log(`\n=== Building ${deck} -> ${outDir} ===`)
-    run('npx', ['slidev', 'build', path.join('decks', deck, 'slides.md'), '--out', outDir, ...rest])
+    const base = deck === defaultDeck ? '/' : `/${deck}/`
+    console.log(`\n=== Building ${deck} -> ${outDir} (base: ${base}) ===`)
+    run('npx', ['slidev', 'build', path.join('decks', deck, 'slides.md'), '--out', outDir, '--base', base, ...rest])
   }
   process.exit(0)
 }

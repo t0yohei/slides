@@ -68,7 +68,7 @@ npm run build:all
 - `index` deck は `dist/`
 - それ以外の deck は `dist/<slug>/`
 
-に出る。
+に出る。公開用 build では各 deck に `/<slug>/` の base も自動で付く。
 
 ### 新しい発表を追加
 
