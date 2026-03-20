@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "deck:list": "node scripts/slides.mjs list",
+    "deck:index": "node scripts/slides.mjs generate-index",
+    "deck:new": "node scripts/slides.mjs new",
     "dev": "node scripts/slides.mjs dev",
     "build": "node scripts/slides.mjs build",
     "build:all": "node scripts/slides.mjs build-all",
