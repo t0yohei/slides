@@ -1,4 +1,4 @@
-import { mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync } from 'node:fs'
+import { mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync, cpSync } from 'node:fs'
 import { spawnSync } from 'node:child_process'
 import path from 'node:path'
 
@@ -68,6 +68,12 @@ function resolveDeck(inputDeck) {
 
 function cleanDist() {
   rmSync(distDir, { recursive: true, force: true })
+}
+
+function copyPublicAssets() {
+  const publicDir = path.resolve('public')
+  if (!existsSync(publicDir)) return
+  cpSync(publicDir, distDir, { recursive: true })
 }
 
 function run(command, args) {
@@ -216,6 +222,7 @@ if (command === 'build-all') {
     console.log(`\n=== Building ${deck} -> ${outDir} (base: ${base}) ===`)
     run('npx', ['slidev', 'build', path.join('decks', deck, 'slides.md'), '--out', outDir, '--base', base, ...rest])
   }
+  copyPublicAssets()
   process.exit(0)
 }
 
@@ -233,6 +240,7 @@ switch (command) {
     const outDir = deck === defaultDeck ? distDir : path.join(distDir, deck)
     const base = deck === defaultDeck ? withBasePrefix('/') : withBasePrefix(`/${deck}/`)
     run('npx', ['slidev', 'build', entry, '--out', outDir, '--base', base, ...rest])
+    copyPublicAssets()
     break
   }
   case 'export':
