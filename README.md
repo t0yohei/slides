@@ -9,6 +9,7 @@ Slidev ベースのスライド置き場。
 - `decks/index/slides.md` - deck 一覧ページ（自動生成）
 - `decks/test-slide/slides.md` - 動作確認用のサンプル deck
 - `public/decks/<slug>/...` - その発表専用の画像や素材
+- `public/_redirects` - Cloudflare Pages / Netlify 向けの deck 別ルーティング（自動生成）
 - `components/` - 複数 deck で使い回す Vue コンポーネント
 - `snippets/` - 共通で参照したいコード断片
 - `scripts/slides.mjs` - deck の一覧生成・追加・起動・build をまとめるラッパー
@@ -27,7 +28,7 @@ npm run deck:list
 npm run deck:index
 ```
 
-`decks/index/slides.md` を作り直す。
+`decks/index/slides.md` と `public/_redirects` を作り直す。
 
 ### 既定 deck を起動
 
@@ -87,7 +88,7 @@ npm run deck:new -- --slug ai-agent-night --title "AI Agent Night"
 1. 発表本体は `decks/<slug>/slides.md`
 2. 発表専用画像は `public/decks/<slug>/`
 3. 共通化したいものだけ `components/` や `snippets/` に上げる
-4. deck 追加後は `npm run deck:index` か `npm run build:all` で一覧を更新する
+4. deck 追加後は `npm run deck:index` か `npm run build:all` で一覧と Cloudflare 用 routing を更新する
 
 ## 現在の deck
 
