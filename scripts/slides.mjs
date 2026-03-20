@@ -76,6 +76,19 @@ function ensureDeck(slug, title) {
   )
 }
 
+function generateCloudflareRedirects() {
+  const decks = getDecks({ includeIndex: false })
+  const lines = []
+
+  for (const deck of decks) {
+    lines.push(`/${deck} /${deck}/ 301`)
+    lines.push(`/${deck}/* /${deck}/index.html 200`)
+  }
+
+  lines.push('/* /index.html 200')
+  writeFileSync(path.join('public', '_redirects'), `${lines.join('\n')}\n`)
+}
+
 function generateIndexDeck() {
   const deckDir = path.join(decksDir, defaultDeck)
   mkdirSync(deckDir, { recursive: true })
@@ -151,6 +164,7 @@ if (command === 'list') {
 
 if (command === 'generate-index') {
   generateIndexDeck()
+  generateCloudflareRedirects()
   process.exit(0)
 }
 
@@ -158,12 +172,14 @@ if (command === 'new') {
   const { slug, title } = parseNewDeckArgs([maybeDeck, ...rest].filter(Boolean))
   ensureDeck(slug, title)
   generateIndexDeck()
+  generateCloudflareRedirects()
   console.log(`Created deck: ${slug}`)
   process.exit(0)
 }
 
 if (command === 'build-all') {
   generateIndexDeck()
+  generateCloudflareRedirects()
   const allDecks = getDecks()
   if (allDecks.length === 0) {
     console.error('No decks found in ./decks')
