@@ -1,12 +1,16 @@
 {
-  "name": "rails-rail-talk",
+  "name": "slides",
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "build:pages": "slidev build --base /slides/",
-    "dev": "slidev --open",
-    "export": "slidev export"
+    "deck:list": "node scripts/slides.mjs list",
+    "deck:index": "node scripts/slides.mjs generate-index",
+    "deck:new": "node scripts/slides.mjs new",
+    "dev": "node scripts/slides.mjs dev",
+    "build": "node scripts/slides.mjs build",
+    "build:all": "node scripts/slides.mjs build-all",
+    "build:pages": "SLIDEV_BASE_PREFIX=${SLIDEV_BASE_PREFIX:-slides} node scripts/slides.mjs build-all",
+    "export": "node scripts/slides.mjs export"
   },
   "dependencies": {
     "@slidev/cli": "^52.14.1",

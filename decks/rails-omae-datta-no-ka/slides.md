@@ -65,7 +65,7 @@ class: text-center
 
 <div class="mt-8 grid grid-cols-[180px_1fr] gap-8 items-center text-left">
   <div>
-    <img src="/images/profile.jpg" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
+    <img src="../../public/decks/rails-omae-datta-no-ka/profile.jpg" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
   </div>
   <div class="text-xl leading-10">
     <div>- Ruby / Rails を使ったプロダクト開発が好き</div>
@@ -102,7 +102,7 @@ layout: section
 
 # サービス構成図
 
-<img src="/images/kodatelog-architecture.svg" class="mt-6 rounded-2xl shadow-lg border border-gray-200 max-h-[32rem] w-full object-contain mx-auto" />
+<img src="../../public/decks/rails-omae-datta-no-ka/kodatelog-architecture.svg" class="mt-6 rounded-2xl shadow-lg border border-gray-200 max-h-[32rem] w-full object-contain mx-auto" />
 
 <div class="mt-4 text-sm opacity-75">
 Pages + Workers + D1 + R2 を基本に、AI機能と監視を後ろに載せている
@@ -129,7 +129,7 @@ layoutClass: gap-12
 
 ::right::
 
-<img src="/images/hono_logo.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
+<img src="../../public/decks/rails-omae-datta-no-ka/hono_logo.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
 
 
 ---
@@ -163,7 +163,7 @@ Rails のレール = 運用知見のプリセット
 - `config/initializers/filter_parameter_logging.rb` で `password`, `email`, `secret` などをマスクできる
 - Hono ではそこも自前実装になった
 
-<img src="/images/log-masking-example.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
+<img src="../../public/decks/rails-omae-datta-no-ka/log-masking-example.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
 
 ---
 
@@ -178,7 +178,7 @@ Rails のレール = 運用知見のプリセット
 Rails の rollback は、開発速度にかなり効果的
 </div>
 
-<img src="/images/rollback-example.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[16rem] w-full object-contain mx-auto" />
+<img src="../../public/decks/rails-omae-datta-no-ka/rollback-example.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[16rem] w-full object-contain mx-auto" />
 
 ---
 layout: two-cols
@@ -198,8 +198,8 @@ layoutClass: gap-8
 ::right::
 
 <div class="pt-0 space-y-2">
-  <img src="/images/uuid-example-2.png" class="rounded-xl shadow-lg border border-gray-200 max-h-72 w-full object-contain mx-auto" />
-  <img src="/images/uuid-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-72 w-full object-contain mx-auto" />
+  <img src="../../public/decks/rails-omae-datta-no-ka/uuid-example-2.png" class="rounded-xl shadow-lg border border-gray-200 max-h-72 w-full object-contain mx-auto" />
+  <img src="../../public/decks/rails-omae-datta-no-ka/uuid-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-72 w-full object-contain mx-auto" />
   <div class="text-sm opacity-70">UUID は一意性には強いけど、目視追跡はかなりつらい</div>
 </div>
 
@@ -213,7 +213,7 @@ layoutClass: gap-8
 - integer にも利点はあるけど、個人的には datetime の default がありがたい
 
 <div class="mt-6">
-  <img src="/images/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-[22rem] w-full object-contain mx-auto" />
+  <img src="../../public/decks/rails-omae-datta-no-ka/uuid-unixtime-example.png" class="rounded-xl shadow-lg border border-gray-200 max-h-[22rem] w-full object-contain mx-auto" />
   <div class="text-sm opacity-70 mt-2">数字としては扱いやすくても、人間には読みにくい</div>
 </div>
 
