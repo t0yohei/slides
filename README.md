@@ -111,8 +111,8 @@ npm run deck:new -- --slug ai-agent-night --title "AI Agent Night"
 
 公開 URL は次になる。
 
-- 一覧: `https://toyon-tech.github.io/slides/`
-- 例: `https://toyon-tech.github.io/slides/rails-omae-datta-no-ka/`
+- 一覧: `https://t0yohei.github.io/slides/`
+- 例: `https://t0yohei.github.io/slides/rails-omae-datta-no-ka/`
 
 ## 現在の deck
 

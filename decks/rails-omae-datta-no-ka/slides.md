@@ -13,11 +13,11 @@ routerMode: hash
 seoMeta:
   ogTitle: Rails、お前だったのか。
   ogDescription: Cloudflare + Hono で新規開発して、Rails のレールの価値を痛感した話
-  ogImage: https://toyon-tech.github.io/slides/decks/rails-omae-datta-no-ka/ogp.png
+  ogImage: https://t0yohei.github.io/slides/decks/rails-omae-datta-no-ka/ogp.png
   twitterCard: summary_large_image
   twitterTitle: Rails、お前だったのか。
   twitterDescription: Cloudflare + Hono で新規開発して、Rails のレールの価値を痛感した話
-  twitterImage: https://toyon-tech.github.io/slides/decks/rails-omae-datta-no-ka/ogp.png
+  twitterImage: https://t0yohei.github.io/slides/decks/rails-omae-datta-no-ka/ogp.png
 ---
 
 <style>
