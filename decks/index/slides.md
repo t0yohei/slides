@@ -23,10 +23,10 @@ layout: default
 
 # Decks
 
-<a href="/slides/rails-omae-datta-no-ka/" target="_self">Rails、お前だったのか。</a>
+<a href="/rails-omae-datta-no-ka/" target="_self">Rails、お前だったのか。</a>
 <div class="text-sm opacity-60 mt-1">decks/rails-omae-datta-no-ka/slides.md</div>
 
-<a href="/slides/test-slide/" target="_self">Test Slide</a>
+<a href="/test-slide/" target="_self">Test Slide</a>
 <div class="text-sm opacity-60 mt-1">decks/test-slide/slides.md</div>
 
 <div class="mt-10 text-sm opacity-60">

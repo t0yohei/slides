@@ -37,7 +37,13 @@ GitHub Pages 用の base prefix が必要な場合は `SLIDEV_BASE_PREFIX=<repo-
 npm run dev
 ```
 
-既定では `index` deck を開く。
+既定では `index` をローカル静的 preview として立ち上げる。
+このとき全 deck をまとめて build して配信するので、一覧ページから各 deck へそのまま遷移できる。
+
+- 既定ポート: `3030`
+- 変更したい場合: `npm run dev -- --port 4173`
+
+個別 deck を Slidev の開発モードで触りたい場合は、次の deck 指定起動を使う。
 
 ### deck を指定して起動
 

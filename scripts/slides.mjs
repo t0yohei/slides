@@ -1,5 +1,6 @@
-import { mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync, cpSync } from 'node:fs'
+import { mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync, cpSync, statSync, createReadStream } from 'node:fs'
 import { spawnSync } from 'node:child_process'
+import { createServer } from 'node:http'
 import path from 'node:path'
 
 const decksDir = path.resolve('decks')
@@ -184,7 +185,106 @@ function parseNewDeckArgs(args) {
   return { slug, title }
 }
 
-const [command = 'list', maybeDeck, ...rest] = process.argv.slice(2)
+function getFlagValue(args, names, fallback) {
+  for (let i = 0; i < args.length; i += 1) {
+    const arg = args[i]
+    if (!names.includes(arg)) continue
+    const next = args[i + 1]
+    if (next && !next.startsWith('--')) return next
+  }
+  return fallback
+}
+
+function getContentType(filePath) {
+  const ext = path.extname(filePath).toLowerCase()
+  switch (ext) {
+    case '.html':
+      return 'text/html; charset=utf-8'
+    case '.js':
+      return 'application/javascript; charset=utf-8'
+    case '.css':
+      return 'text/css; charset=utf-8'
+    case '.json':
+      return 'application/json; charset=utf-8'
+    case '.svg':
+      return 'image/svg+xml'
+    case '.png':
+      return 'image/png'
+    case '.jpg':
+    case '.jpeg':
+      return 'image/jpeg'
+    case '.webp':
+      return 'image/webp'
+    case '.gif':
+      return 'image/gif'
+    case '.ico':
+      return 'image/x-icon'
+    case '.txt':
+      return 'text/plain; charset=utf-8'
+    case '.woff':
+      return 'font/woff'
+    case '.woff2':
+      return 'font/woff2'
+    default:
+      return 'application/octet-stream'
+  }
+}
+
+function startStaticPreviewServer(args) {
+  const port = Number(getFlagValue(args, ['--port', '-p'], process.env.PORT || '3030'))
+  const host = process.env.HOST || '127.0.0.1'
+
+  cleanDist()
+  generateIndexDeck()
+  generateCloudflareRedirects()
+
+  const allDecks = getDecks()
+  for (const deck of allDecks) {
+    const outDir = deck === defaultDeck ? distDir : path.join(distDir, deck)
+    const base = deck === defaultDeck ? withBasePrefix('/') : withBasePrefix(`/${deck}/`)
+    console.log(`\n=== Building ${deck} -> ${outDir} (base: ${base}) ===`)
+    run('npx', ['slidev', 'build', path.join('decks', deck, 'slides.md'), '--out', outDir, '--base', base])
+  }
+  copyPublicAssets()
+
+  const server = createServer((req, res) => {
+    const requestPath = new URL(req.url || '/', `http://${req.headers.host || 'localhost'}`).pathname
+    const safePath = path.normalize(decodeURIComponent(requestPath)).replace(/^([.][.][/\\])+/, '')
+    let filePath = path.join(distDir, safePath)
+
+    try {
+      if (existsSync(filePath) && statSync(filePath).isDirectory()) {
+        filePath = path.join(filePath, 'index.html')
+      } else if (!existsSync(filePath) || statSync(filePath).isDirectory()) {
+        const asHtml = `${filePath}.html`
+        if (existsSync(asHtml)) {
+          filePath = asHtml
+        } else {
+          filePath = path.join(distDir, safePath, 'index.html')
+        }
+      }
+
+      if (!existsSync(filePath)) {
+        filePath = path.join(distDir, 'index.html')
+      }
+
+      res.writeHead(200, { 'Content-Type': getContentType(filePath) })
+      createReadStream(filePath).pipe(res)
+    } catch (error) {
+      res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' })
+      res.end(String(error))
+    }
+  })
+
+  server.listen(port, host, () => {
+    console.log(`\nStatic preview ready: http://${host}:${port}`)
+    console.log('Index deck links now work locally across all built decks.')
+  })
+}
+
+const [command = 'list', maybeDeckRaw, ...restRaw] = process.argv.slice(2)
+const maybeDeck = maybeDeckRaw && !String(maybeDeckRaw).startsWith('--') ? maybeDeckRaw : ''
+const rest = maybeDeck ? restRaw : [maybeDeckRaw, ...restRaw].filter(Boolean)
 const decks = getDecks()
 
 if (command === 'list') {
@@ -231,7 +331,10 @@ const entry = path.join('decks', deck, 'slides.md')
 
 switch (command) {
   case 'dev':
-    if (deck === defaultDeck) generateIndexDeck()
+    if (deck === defaultDeck) {
+      startStaticPreviewServer(rest)
+      break
+    }
     run('npx', ['slidev', entry, '--open', ...rest])
     break
   case 'build': {
@@ -248,6 +351,6 @@ switch (command) {
     break
   default:
     console.error(`Unknown command: ${command}`)
-    console.error('Usage: node scripts/slides.mjs <list|generate-index|new|dev|build|build-all|export> [deck]')
+    console.error('Usage: node scripts/slides.mjs <list|generate-index|new|dev|build|build-all|export> [deck] [--port <port>]')
     process.exit(1)
 }
