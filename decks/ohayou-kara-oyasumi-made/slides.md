@@ -60,8 +60,21 @@ body,
 <div class="mt-14 text-lg opacity-60">t0yohei @ 🦞ClawCon Tokyo</div>
 
 ---
-src: ./slides/profile-slide.vue
+layout: center
+class: text-center
 ---
+
+# t0yohei について
+
+<div class="mt-8 grid grid-cols-[180px_1fr] gap-8 items-center text-left">
+  <div>
+    <img src="../../public/decks/profile.jpg" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
+  </div>
+  <div class="text-xl leading-10">
+    <div>- Web アプリ開発のフリーランスエンジニア</div>
+    <div>- 最近は OpenClaw と遊ぶのが趣味</div>
+  </div>
+</div>
 
 ---
 layout: center
@@ -93,8 +106,13 @@ Google Meet で部屋を映しながら、Discord から実際に送る
 </div>
 
 ---
-src: ./slides/how-it-works-slide.vue
+layout: center
+class: text-center
 ---
+
+# How it works
+
+<img src="../../public/decks/ohayou-kara-oyasumi-made/how-it-works.svg" class="mt-6 w-full max-h-[34rem] object-contain mx-auto" />
 
 ---
 layout: default
