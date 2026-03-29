@@ -44,11 +44,38 @@ npm run dev
 - 変更したい場合: `npm run dev -- --port 4173`
 
 個別 deck を Slidev の開発モードで触りたい場合は、次の deck 指定起動を使う。
+一覧から複数 deck を行き来するローカル確認は `npm run dev`、1つの deck を編集しながら詰めるときは `npm run dev -- <slug>` が向いている。
 
-### deck を指定して起動
+### deck を指定して起動（HMRあり）
 
 ```bash
-node scripts/slides.mjs dev rails-omae-datta-no-ka
+npm run dev -- rails-omae-datta-no-ka
+```
+
+内部では `node scripts/slides.mjs dev <slug>` を呼んでいて、`index` 以外は Slidev の開発モードで起動する。
+なので、**個別 deck の編集時はこちらを使えば HMR が効く**。
+
+```bash
+# 例
+npm run dev -- ohayou-kara-oyasumi-made
+npm run dev -- rails-omae-datta-no-ka
+```
+
+### 一覧 preview と deck HMR を同時に起動
+
+```bash
+npm run dev:pair -- ohayou-kara-oyasumi-made
+```
+
+これで次の 2 本が同時に立ち上がる。
+
+- 一覧 preview: `http://127.0.0.1:3030`
+- 指定 deck の HMR: `http://127.0.0.1:3031`
+
+ポートを変えたい場合は次のように渡せる。
+
+```bash
+npm run dev:pair -- ohayou-kara-oyasumi-made --index-port 4173 --deck-port 4174
 ```
 
 ### 既定 deck を build
@@ -123,5 +150,6 @@ npm run deck:new -- --slug ai-agent-night --title "AI Agent Night"
 ## 現在の deck
 
 - `index` - deck 一覧ページ
+- `ohayou-kara-oyasumi-made` - 「おはよう」から「おやすみ」まで
 - `rails-omae-datta-no-ka` - Rails、お前だったのか。
 - `test-slide` - 複数 deck 運用確認用のサンプル
