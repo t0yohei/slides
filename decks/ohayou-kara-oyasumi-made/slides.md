@@ -81,12 +81,12 @@ layout: center
 class: text-center
 ---
 
-# Hook
+# やりたいこと
 
-<div class="mt-8 text-left inline-block text-xl leading-10">
-- やったこと: OpenClaw による照明操作
-- まず 1 日の始まりと終わりに OpenClaw を取り入れたかった
-- OpenClaw を、生活の中で自然に使う相棒として馴染ませたかった
+<div class="mt-8 text-left inline-block text-xl leading-10 space-y-4">
+  <div><span class="font-bold text-orange-700">やったこと:</span> OpenClaw による照明操作</div>
+  <div><span class="font-bold text-orange-700">なぜやろうと思ったのか:</span> OpenClaw をより生活に馴染ませていきたかった</div>
+  <div><span class="font-bold text-orange-700">最初のユースケース:</span> 1 日の始まりと終わりに OpenClaw を取り入れること</div>
 </div>
 
 <div class="mt-12 text-2xl leading-12 font-semibold opacity-85">
