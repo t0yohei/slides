@@ -120,7 +120,7 @@ class: text-center
 layout: default
 ---
 
-# 3秒以内に操作を終わらせたかった
+# 工夫ポイント: 3秒以内に操作を終わらせる
 
 <div class="mt-6 text-xl leading-9">
 <div class="font-bold">やったこと 1: STT を local / 高速化</div>
