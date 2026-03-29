@@ -81,20 +81,17 @@ layout: center
 class: text-center
 ---
 
-# やろうとしてること
+# Hook
 
 <div class="mt-8 text-left inline-block text-xl leading-10">
-- Discord で OpenClaw に話しかける
-- 音声から意図を判定する
-- 家電を fastpath で操作する
+- やったこと: OpenClaw による照明操作
+- まず 1 日の始まりと終わりに OpenClaw を取り入れたかった
+- OpenClaw を、生活の中で自然に使う相棒として馴染ませたかった
 </div>
 
-<div class="mt-12 text-2xl leading-12 font-mono opacity-80">
-Discord音声<br>
-→ STT<br>
-→ audio-router<br>
-→ intent 判定<br>
-→ 家電操作
+<div class="mt-12 text-2xl leading-12 font-semibold opacity-85">
+「おはよう」で電気をつけて、<br>
+「おやすみ」で電気を消す。
 </div>
 
 ---
