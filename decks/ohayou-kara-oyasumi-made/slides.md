@@ -112,26 +112,44 @@ class: text-center
 
 # How it works
 
-<div class="mt-8 text-left inline-block text-xl leading-10 font-mono">
-Discord音声<br>
-↓<br>
-高速STT (local fstt)<br>
-↓<br>
-message:transcribed<br>
-↓<br>
-audio-router<br>
-├─ local Ollama で intent 判定<br>
-├─ transcript の揺らぎ補正<br>
-└─ fastpath なら即 API 実行<br>
-↓<br>
-SwitchBot API<br>
-↓<br>
-照明 / エアコン
-</div>
+<div class="mt-8 flex items-stretch gap-6">
+  <div class="w-56 shrink-0 flex flex-col justify-center gap-6">
+    <div class="rounded-2xl border border-gray-200 bg-white px-4 py-8 text-center shadow-sm min-h-36 flex flex-col justify-center">
+      <div class="text-sm opacity-60">outside</div>
+      <div class="mt-2 text-2xl font-semibold">Discord</div>
+    </div>
 
-<div class="mt-8 text-base opacity-70">
-家電操作は main agent の返答を待たずに先に処理<br>
-雑談や複雑な依頼は main 側に渡す
+    <div class="rounded-2xl border border-gray-200 bg-white px-4 py-8 text-center shadow-sm min-h-36 flex flex-col justify-center">
+      <div class="text-sm opacity-60">outside</div>
+      <div class="mt-2 text-2xl font-semibold">SwitchBot</div>
+      <div class="text-sm opacity-70">API</div>
+    </div>
+  </div>
+
+  <div class="flex-1 rounded-3xl border-2 border-orange-300 bg-orange-50 px-8 py-8 shadow-sm min-h-[22rem] flex flex-col justify-center">
+    <div class="text-center text-sm font-semibold tracking-wide text-orange-700">OpenClaw</div>
+
+    <div class="mt-8 flex flex-col items-center gap-4 text-center">
+      <div class="rounded-2xl border border-gray-200 bg-white px-5 py-4 shadow-sm w-72">
+        <div class="text-sm opacity-60">speech to text</div>
+        <div class="mt-1 text-xl font-semibold">高速 STT</div>
+      </div>
+
+      <div class="text-2xl text-orange-500">↓</div>
+
+      <div class="rounded-2xl border border-gray-200 bg-white px-5 py-4 shadow-sm w-72">
+        <div class="text-sm opacity-60">routing</div>
+        <div class="mt-1 text-xl font-semibold">audio-router</div>
+      </div>
+
+      <div class="text-2xl text-orange-500">↓</div>
+
+      <div class="rounded-2xl border border-orange-300 bg-orange-100 px-5 py-4 shadow-sm w-72">
+        <div class="text-sm opacity-60">fast path</div>
+        <div class="mt-1 text-xl font-semibold">家電操作を先に実行</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 ---
