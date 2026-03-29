@@ -53,11 +53,11 @@ body,
 }
 </style>
 
-# 「おはよう」から「おやすみ」まで
+# <span class="text-4xl">「おはよう」から「おやすみ」まで</span>
 
-<div class="mt-8 text-xl opacity-80">OpenClaw の家電操作で始める AI 生活</div>
+<div class="mt-8 text-2xl opacity-85">OpenClaw の家電操作から始める AI 生活</div>
 
-<div class="mt-14 text-lg opacity-60">t0yohei</div>
+<div class="mt-14 text-lg opacity-60">t0yohei @ 🦞ClawCon Tokyo</div>
 
 ---
 layout: center
