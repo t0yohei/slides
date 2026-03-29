@@ -88,6 +88,8 @@ class: text-center
 「おやすみ」で電気を消す。
 </div>
 
+<img src="../../public/decks/ohayou-kara-oyasumi-made/intent-example.png" class="mt-10 rounded-2xl shadow-lg border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
+
 ---
 layout: center
 class: text-center
