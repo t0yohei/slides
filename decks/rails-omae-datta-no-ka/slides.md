@@ -82,7 +82,7 @@ class: text-center
 
 <div class="mt-8 grid grid-cols-[180px_1fr] gap-8 items-center text-left">
   <div>
-    <img src="../../public/decks/rails-omae-datta-no-ka/profile.jpg" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
+    <img src="../../public/decks/profile.jpg" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
   </div>
   <div class="text-xl leading-10">
     <div>- Ruby / Rails を使ったプロダクト開発が好き</div>
