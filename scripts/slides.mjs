@@ -1,5 +1,5 @@
 import { mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync, cpSync, statSync, createReadStream } from 'node:fs'
-import { spawnSync } from 'node:child_process'
+import { spawnSync, spawn } from 'node:child_process'
 import { createServer } from 'node:http'
 import path from 'node:path'
 
@@ -80,6 +80,14 @@ function copyPublicAssets() {
 function run(command, args) {
   const result = spawnSync(command, args, { stdio: 'inherit', shell: false })
   if (result.status !== 0) process.exit(result.status ?? 1)
+}
+
+function spawnStreaming(command, args, options = {}) {
+  return spawn(command, args, {
+    stdio: 'inherit',
+    shell: false,
+    ...options,
+  })
 }
 
 function ensureDeck(slug, title) {
@@ -323,6 +331,54 @@ function startStaticPreviewServer(args) {
   })
 }
 
+function startPairedDevServer(deck, args) {
+  if (!deck || deck === defaultDeck) {
+    console.error('Usage: node scripts/slides.mjs dev-pair <deck> [--index-port <port>] [--deck-port <port>]')
+    console.error(`Choose a deck other than ${defaultDeck}.`)
+    process.exit(1)
+  }
+
+  const indexPort = String(getFlagValue(args, ['--index-port'], '3030'))
+  const deckPort = String(getFlagValue(args, ['--deck-port'], '3031'))
+  const host = process.env.HOST || '127.0.0.1'
+  const childEnv = { ...process.env, HOST: host }
+
+  console.log(`Starting paired dev mode for ${deck}`)
+  console.log(`- catalog preview: http://${host}:${indexPort}`)
+  console.log(`- deck HMR: http://${host}:${deckPort}`)
+
+  const catalog = spawnStreaming(process.execPath, [path.resolve('scripts/slides.mjs'), 'dev', defaultDeck, '--port', indexPort], {
+    env: childEnv,
+  })
+
+  const deckDev = spawnStreaming('npx', ['slidev', path.join('decks', deck, 'slides.md'), '--open', '--port', deckPort], {
+    env: childEnv,
+  })
+
+  let shuttingDown = false
+  const shutdown = (signal = 'SIGTERM') => {
+    if (shuttingDown) return
+    shuttingDown = true
+    if (!catalog.killed) catalog.kill(signal)
+    if (!deckDev.killed) deckDev.kill(signal)
+  }
+
+  const bindExit = (child, name) => {
+    child.on('exit', (code, signal) => {
+      if (shuttingDown) return
+      console.error(`${name} exited (${signal || code})`)
+      shutdown(signal || 'SIGTERM')
+      process.exit(typeof code === 'number' ? code : 1)
+    })
+  }
+
+  bindExit(catalog, 'catalog preview')
+  bindExit(deckDev, 'deck dev server')
+
+  process.on('SIGINT', () => shutdown('SIGINT'))
+  process.on('SIGTERM', () => shutdown('SIGTERM'))
+}
+
 const [command = 'list', maybeDeckRaw, ...restRaw] = process.argv.slice(2)
 const maybeDeck = maybeDeckRaw && !String(maybeDeckRaw).startsWith('--') ? maybeDeckRaw : ''
 const rest = maybeDeck ? restRaw : [maybeDeckRaw, ...restRaw].filter(Boolean)
@@ -367,6 +423,12 @@ if (command === 'build-all') {
   process.exit(0)
 }
 
+if (command === 'dev-pair') {
+  const deck = resolveDeck(maybeDeck)
+  startPairedDevServer(deck, rest)
+  await new Promise(() => {})
+}
+
 const deck = resolveDeck(maybeDeck)
 const entry = path.join('decks', deck, 'slides.md')
 
@@ -392,6 +454,6 @@ switch (command) {
     break
   default:
     console.error(`Unknown command: ${command}`)
-    console.error('Usage: node scripts/slides.mjs <list|generate-index|new|dev|build|build-all|export> [deck] [--port <port>]')
+    console.error('Usage: node scripts/slides.mjs <list|generate-index|new|dev|dev-pair|build|build-all|export> [deck] [--port <port>]')
     process.exit(1)
 }

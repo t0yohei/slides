@@ -7,6 +7,7 @@
     "deck:index": "node scripts/slides.mjs generate-index",
     "deck:new": "node scripts/slides.mjs new",
     "dev": "node scripts/slides.mjs dev",
+    "dev:pair": "node scripts/slides.mjs dev-pair",
     "build": "node scripts/slides.mjs build",
     "build:all": "node scripts/slides.mjs build-all",
     "build:pages": "SLIDEV_BASE_PREFIX=${SLIDEV_BASE_PREFIX:-slides} node scripts/slides.mjs build-all",

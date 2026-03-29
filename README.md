@@ -61,6 +61,23 @@ npm run dev -- ohayou-kara-oyasumi-made
 npm run dev -- rails-omae-datta-no-ka
 ```
 
+### 一覧 preview と deck HMR を同時に起動
+
+```bash
+npm run dev:pair -- ohayou-kara-oyasumi-made
+```
+
+これで次の 2 本が同時に立ち上がる。
+
+- 一覧 preview: `http://127.0.0.1:3030`
+- 指定 deck の HMR: `http://127.0.0.1:3031`
+
+ポートを変えたい場合は次のように渡せる。
+
+```bash
+npm run dev:pair -- ohayou-kara-oyasumi-made --index-port 4173 --deck-port 4174
+```
+
 ### 既定 deck を build
 
 ```bash
