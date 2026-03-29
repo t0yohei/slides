@@ -83,6 +83,11 @@ class: text-center
 
 # やりたいこと
 
+<div class="mt-12 text-2xl leading-12 font-semibold opacity-85">
+「おはよう」で電気をつけて、<br>
+「おやすみ」で電気を消す。
+</div>
+
 ---
 layout: center
 class: text-center
