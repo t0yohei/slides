@@ -112,15 +112,14 @@ class: text-center
 
 # How it works
 
-<div class="mt-8 grid grid-cols-[220px_auto_1fr_auto_220px] gap-x-4 items-center text-center">
+<div class="mt-8 grid grid-cols-[220px_1fr_220px] gap-6 items-center text-center">
   <div class="rounded-2xl border border-gray-200 bg-white px-4 py-6 shadow-sm">
     <div class="text-sm opacity-60">outside</div>
     <div class="mt-2 text-xl font-semibold">Discord 音声</div>
+    <div class="mt-4 text-3xl text-orange-500">→</div>
   </div>
 
-  <div class="text-3xl text-orange-500">→</div>
-
-  <div class="rounded-3xl border-2 border-orange-300 bg-orange-50 px-6 py-6 shadow-sm text-left">
+  <div class="rounded-3xl border-2 border-orange-300 bg-orange-50 px-6 py-6 shadow-sm">
     <div class="text-sm font-semibold tracking-wide text-orange-700">OpenClaw 内部</div>
     <div class="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-3 items-center text-center">
       <div class="rounded-2xl border border-gray-200 bg-white px-3 py-4">
@@ -146,12 +145,11 @@ class: text-center
     </div>
   </div>
 
-  <div class="text-3xl text-orange-500">→</div>
-
   <div class="rounded-2xl border border-gray-200 bg-white px-4 py-6 shadow-sm">
     <div class="text-sm opacity-60">outside</div>
     <div class="mt-2 text-xl font-semibold">SwitchBot API</div>
     <div class="text-sm opacity-70">照明 / エアコン</div>
+    <div class="mt-4 text-3xl text-orange-500">←</div>
   </div>
 </div>
 
