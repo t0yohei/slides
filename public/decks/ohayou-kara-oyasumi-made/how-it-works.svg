@@ -31,11 +31,11 @@
 
   <path d="M380 270 H520" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
   <path d="M380 630 H520" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
-  <path d="M1300 715 H1380" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1380 715 H1300" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
 
   <path d="M520 270 L500 258 L500 282 Z" fill="#F97316" transform="translate(20 0)"/>
   <path d="M520 630 L500 618 L500 642 Z" fill="#F97316" transform="translate(20 0)"/>
-  <path d="M1380 715 L1360 703 L1360 727 Z" fill="#F97316"/>
+  <path d="M1300 715 L1320 703 L1320 727 Z" fill="#F97316"/>
 
   <text x="960" y="820" text-anchor="middle" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">雑談や複雑な依頼だけ main agent 側に渡す</text>
 </svg>
