@@ -112,7 +112,7 @@ class: text-center
 
 # How it works
 
-<img src="how-it-works.svg" class="mt-6 w-full max-h-[34rem] object-contain mx-auto" />
+<img src="../../public/decks/ohayou-kara-oyasumi-made/how-it-works.svg" class="mt-6 w-full max-h-[34rem] object-contain mx-auto" />
 
 ---
 layout: default
