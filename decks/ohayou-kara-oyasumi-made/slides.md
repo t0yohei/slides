@@ -99,7 +99,7 @@ class: text-center
 
 <div class="mt-10 text-3xl leading-14 font-semibold">
 おはよう<br>
-暖房つけて<br>
+冷房つけて<br>
 おやすみ
 </div>
 
@@ -114,13 +114,13 @@ class: text-center
 
 # How it works
 
-<img src="../../public/decks/ohayou-kara-oyasumi-made/how-it-works.svg" class="mt-6 w-full max-h-[34rem] object-contain mx-auto" />
+<img src="../../public/decks/ohayou-kara-oyasumi-made/how-it-works.svg" class="w-full max-h-[30rem] object-contain mx-auto" />
 
 ---
 layout: default
 ---
 
-# 工夫ポイント: 3秒以内に操作を終わらせる
+# 工夫ポイント: 3秒以内に操作を終わらせたい
 
 <div class="mt-6 text-xl leading-9">
 <div class="font-bold">1: STT を local / 高速化</div>
@@ -146,9 +146,9 @@ class: text-center
 
 # Next
 
-<div class="mt-8 text-left inline-block text-xl leading-10">
+<div class="mt-10 text-left inline-block text-2xl leading-10">
 Discord を使わずに、OpenClaw に話しかけるだけで操作できるようにしたい
 </div>
-<div class="mt-8 text-left inline-block text-xl leading-10">
+<div class="mt-10 text-left inline-block text-2xl leading-10">
 家電以外のことも、会話で OpenClaw に頼めるようにしたい
 </div>
