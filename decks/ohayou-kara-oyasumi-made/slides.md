@@ -112,44 +112,46 @@ class: text-center
 
 # How it works
 
-<div class="mt-8 grid grid-cols-[240px_1fr] gap-6 items-center">
-  <div class="space-y-6 text-center">
-    <div class="rounded-2xl border border-gray-200 bg-white px-4 py-6 shadow-sm">
+<div class="mt-8 flex items-start gap-8">
+  <div class="w-56 shrink-0 space-y-5 text-center">
+    <div class="rounded-2xl border border-gray-200 bg-white px-4 py-5 shadow-sm">
       <div class="text-sm opacity-60">outside</div>
       <div class="mt-2 text-xl font-semibold">Discord 音声</div>
-      <div class="mt-4 text-3xl text-orange-500">→</div>
+      <div class="mt-3 text-3xl text-orange-500">→</div>
     </div>
 
-    <div class="rounded-2xl border border-gray-200 bg-white px-4 py-6 shadow-sm">
+    <div class="rounded-2xl border border-gray-200 bg-white px-4 py-5 shadow-sm">
       <div class="text-sm opacity-60">outside</div>
       <div class="mt-2 text-xl font-semibold">SwitchBot API</div>
       <div class="text-sm opacity-70">照明 / エアコン</div>
-      <div class="mt-4 text-3xl text-orange-500">←</div>
+      <div class="mt-3 text-3xl text-orange-500">←</div>
     </div>
   </div>
 
-  <div class="rounded-3xl border-2 border-orange-300 bg-orange-50 px-6 py-6 shadow-sm text-center">
+  <div class="flex-1 rounded-3xl border-2 border-orange-300 bg-orange-50 px-6 py-6 shadow-sm text-center">
     <div class="text-sm font-semibold tracking-wide text-orange-700">OpenClaw 内部</div>
-    <div class="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-3 items-center text-center">
-      <div class="rounded-2xl border border-gray-200 bg-white px-3 py-4">
+
+    <div class="mt-5 flex items-center justify-center gap-3 text-center">
+      <div class="w-44 rounded-2xl border border-gray-200 bg-white px-3 py-4">
         <div class="text-sm opacity-60">speech to text</div>
         <div class="mt-1 font-semibold">高速 STT</div>
         <div class="text-xs opacity-70">local fstt</div>
       </div>
       <div class="text-2xl text-orange-500">→</div>
-      <div class="rounded-2xl border border-gray-200 bg-white px-3 py-4">
+      <div class="w-48 rounded-2xl border border-gray-200 bg-white px-3 py-4">
         <div class="text-sm opacity-60">routing</div>
         <div class="mt-1 font-semibold">audio-router</div>
         <div class="text-xs opacity-70">意図判定 / 揺らぎ補正</div>
       </div>
       <div class="text-2xl text-orange-500">→</div>
-      <div class="rounded-2xl border border-orange-300 bg-orange-100 px-3 py-4">
+      <div class="w-52 rounded-2xl border border-orange-300 bg-orange-100 px-3 py-4">
         <div class="text-sm opacity-60">fast path</div>
         <div class="mt-1 font-semibold">家電操作を先に実行</div>
         <div class="text-xs opacity-70">main agent を待たない</div>
       </div>
     </div>
-    <div class="mt-4 text-sm opacity-75">
+
+    <div class="mt-5 text-sm opacity-75">
       雑談や複雑な依頼だけ main agent 側に渡す
     </div>
   </div>
