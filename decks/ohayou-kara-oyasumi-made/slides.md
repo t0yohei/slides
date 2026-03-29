@@ -123,14 +123,16 @@ layout: default
 # 工夫ポイント: 3秒以内に操作を終わらせる
 
 <div class="mt-6 text-xl leading-9">
-<div class="font-bold">やったこと 1: STT を local / 高速化</div>
-<div class="opacity-80">標準の重い経路ではなく、高速な STT を local で利用</div>
+<div class="font-bold">1: STT を local / 高速化</div>
+<div class="opacity-80">　　高速な faster-whisper
+ の STT を local で利用</div>
 
-<div class="mt-6 font-bold">やったこと 2: local LLM (Ollama) で意図判定</div>
-<div class="opacity-80">通信 overhead を減らし、STT の揺らぎ補正と intent 判定をまとめて処理</div>
+<div class="mt-6 font-bold">2: hook で fastpath 実行</div>
+<div class="opacity-80">　　main agent の返答を待たずに家電操作だけ先に処理</div>
 
-<div class="mt-6 font-bold">やったこと 3: hook で fastpath 実行</div>
-<div class="opacity-80">main agent の返答を待たずに家電操作だけ先に処理</div>
+<div class="mt-6 font-bold">3: 正規表現・local LLM (Ollama) で意図判定</div>
+<div class="opacity-80">　　通信 overhead を減らし、STT の揺らぎ補正と intent 判定をまとめて処理</div>
+
 </div>
 
 <div class="mt-10 text-2xl font-bold text-orange-600">
@@ -145,11 +147,8 @@ class: text-center
 # Next
 
 <div class="mt-8 text-left inline-block text-xl leading-10">
-- Discord を使わずに、OpenClaw に話しかけるだけで操作できるようにしたい
-- 家電以外のことも、会話で OpenClaw に頼めるようにしたい
+Discord を使わずに、OpenClaw に話しかけるだけで操作できるようにしたい
 </div>
-
-<div class="mt-12 text-lg opacity-75">
-Google Home のように自然に呼び出せるようにして、<br>
-家電操作だけでなく、日常の頼み事にも広げたい
+<div class="mt-8 text-left inline-block text-xl leading-10">
+家電以外のことも、会話で OpenClaw に頼めるようにしたい
 </div>
