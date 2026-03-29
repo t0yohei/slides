@@ -122,18 +122,24 @@ layout: default
 
 # 3秒以内に操作を終わらせたかった
 
-<div class="mt-6 text-xl leading-9">
-<div class="font-bold">やったこと 1: STT を local / 高速化</div>
-<div class="opacity-80">標準の重い経路ではなく、高速な STT を local で利用</div>
+<div class="mt-6 space-y-6 text-left max-w-4xl mx-auto">
+  <div>
+    <div class="text-xl font-bold">やったこと 1: STT を local / 高速化</div>
+    <div class="mt-2 text-lg opacity-80">標準の重い経路ではなく、高速な STT を local で利用</div>
+  </div>
 
-<div class="mt-6 font-bold">やったこと 2: local LLM (Ollama) で意図判定</div>
-<div class="opacity-80">通信 overhead を減らし、STT の揺らぎ補正と intent 判定をまとめて処理</div>
+  <div>
+    <div class="text-xl font-bold">やったこと 2: local LLM (Ollama) で意図判定</div>
+    <div class="mt-2 text-lg opacity-80">通信 overhead を減らし、STT の揺らぎ補正と intent 判定をまとめて処理</div>
+  </div>
 
-<div class="mt-6 font-bold">やったこと 3: hook で fastpath 実行</div>
-<div class="opacity-80">main agent の返答を待たずに家電操作だけ先に処理</div>
+  <div>
+    <div class="text-xl font-bold">やったこと 3: hook で fastpath 実行</div>
+    <div class="mt-2 text-lg opacity-80">main agent の返答を待たずに家電操作だけ先に処理</div>
+  </div>
 </div>
 
-<div class="mt-10 text-2xl font-bold text-orange-600">
+<div class="mt-10 text-2xl font-bold text-orange-600 text-center">
 遅い部分をできるだけ main agent の外に逃がした
 </div>
 
