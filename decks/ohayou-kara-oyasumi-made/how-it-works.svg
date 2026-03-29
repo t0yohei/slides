@@ -1,0 +1,39 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="32" fill="#FFF9F5"/>
+
+  <rect x="120" y="180" width="260" height="180" rx="28" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="3"/>
+  <text x="250" y="230" text-anchor="middle" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">outside</text>
+  <text x="250" y="300" text-anchor="middle" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Discord</text>
+
+  <rect x="120" y="580" width="260" height="180" rx="28" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="3"/>
+  <text x="250" y="630" text-anchor="middle" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">outside</text>
+  <text x="250" y="690" text-anchor="middle" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">SwitchBot</text>
+  <text x="250" y="725" text-anchor="middle" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">API</text>
+
+  <rect x="470" y="110" width="980" height="680" rx="36" fill="#FFF1E8" stroke="#FDBA74" stroke-width="4"/>
+  <text x="960" y="170" text-anchor="middle" fill="#C2410C" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">OpenClaw</text>
+
+  <rect x="620" y="200" width="680" height="110" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="3"/>
+  <text x="960" y="245" text-anchor="middle" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">speech to text</text>
+  <text x="960" y="295" text-anchor="middle" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">高速 STT</text>
+
+  <text x="960" y="380" text-anchor="middle" fill="#F97316" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">↓</text>
+
+  <rect x="620" y="415" width="680" height="110" rx="24" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="3"/>
+  <text x="960" y="460" text-anchor="middle" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">hook</text>
+  <text x="960" y="500" text-anchor="middle" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">audio router</text>
+
+  <text x="960" y="585" text-anchor="middle" fill="#F97316" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">↓</text>
+
+  <rect x="620" y="620" width="680" height="110" rx="24" fill="#FFEDD5" stroke="#FB923C" stroke-width="3"/>
+  <text x="960" y="665" text-anchor="middle" fill="#C2410C" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Local LLM</text>
+  <text x="960" y="705" text-anchor="middle" fill="#7C2D12" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">正規表現 or Local LLM</text>
+
+  <path d="M620 280 H380" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
+  <path d="M620 675 H380" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M600 280 L590 268 L590 292 Z" fill="#F97316" transform="translate(20 0)"/>
+  <path d="M380 675 L400 663 L400 687 Z" fill="#F97316"/>
+
+  <text x="960" y="770" text-anchor="middle" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">雑談や複雑な依頼だけ main agent 側に渡す</text>
+</svg>
