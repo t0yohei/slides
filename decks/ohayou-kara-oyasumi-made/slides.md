@@ -83,18 +83,13 @@ class: text-center
 
 # やろうとしてること
 
-<div class="mt-8 text-left inline-block text-xl leading-10">
-- Discord で OpenClaw に話しかける
-- 音声から意図を判定する
-- 家電を fastpath で操作する
+<div class="mt-8 text-2xl leading-12 font-semibold opacity-85">
+「おはよう」で電気をつけて、<br>
+「おやすみ」で電気を消す。
 </div>
 
-<div class="mt-12 text-2xl leading-12 font-mono opacity-80">
-Discord音声<br>
-→ STT<br>
-→ audio-router<br>
-→ intent 判定<br>
-→ 家電操作
+<div class="mt-8">
+  <img src="../../public/decks/ohayou-kara-oyasumi-made/openclaw-crayfish-under-light.png" class="w-full max-w-[32rem] max-h-[18rem] object-contain mx-auto rounded-2xl shadow-lg" />
 </div>
 
 ---
