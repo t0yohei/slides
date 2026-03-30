@@ -36,8 +36,7 @@
     <text x="84" y="300" fill="#111827" font-size="78" font-family="Inter, 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif" font-weight="800">「おやすみ」まで</text>
   </g>
 
-  <text x="88" y="378" fill="#374151" font-size="36" font-family="Inter, 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif" font-weight="500">OpenClaw の家電操作から始める</text>
-  <text x="88" y="428" fill="#374151" font-size="36" font-family="Inter, 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif" font-weight="500">AI 生活</text>
+  <text x="88" y="402" fill="#374151" font-size="34" font-family="Inter, 'Hiragino Sans', 'Noto Sans JP', Arial, sans-serif" font-weight="500">OpenClaw の家電操作から始める AI 生活</text>
 
   <rect x="84" y="462" width="418" height="2" fill="#C2410C" opacity="0.34"/>
 
