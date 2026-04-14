@@ -73,7 +73,7 @@ class: text-center
 
 <div class="mt-8 grid grid-cols-[180px_1fr] gap-8 items-center text-left">
   <div>
-    <img src="../../public/decks/openclaw-what-made-it-great/profile.jpg" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
+    <img src="../../public/decks/openclaw-what-made-it-great/profile.png" class="rounded-2xl shadow-lg border border-gray-200 w-40 h-40 object-cover mx-auto" />
   </div>
   <div class="text-xl leading-10">
     <div>- Web アプリ開発のフリーランスエンジニア</div>
@@ -106,17 +106,6 @@ class: text-center
 
 # OpenClaw は何が偉大だったのか
 
-<div class="mt-10 text-2xl opacity-85">
-このLTの問いです
-</div>
-
----
-layout: center
-class: text-center
----
-
-# 人々の想像力を爆発させた
-
 <div class="mt-10 text-2xl leading-12 font-semibold opacity-90">
 OpenClaw が与えたのは、単なる便利ツールではなく、<br>
 「自分専用の相棒を持てるかもしれない」という感覚
@@ -138,24 +127,19 @@ class: text-center
 </div>
 
 ---
-layout: center
-class: text-center
+layout: two-cols
+layoutClass: gap-10
 ---
 
 # 要はパーソナルAIアシスタント
 
-<div class="mt-10 text-left inline-block text-2xl leading-12">
+<div class="mt-6 text-left text-xl leading-10">
 <div>- 自分専用</div>
 <div>- 自分の環境で動く</div>
 <div>- 自分の日常に入り込める</div>
 </div>
 
----
-layout: two-cols
-layoutClass: gap-10
----
-
-# 他の AI Agent とはどう違うか
+<div class="mt-8 text-lg font-semibold opacity-80">他の AI Agent とはどう違うか</div>
 
 ### Claude Code などの AI Agent
 
@@ -226,6 +210,8 @@ class: text-center
 # どういうことか
 
 <div class="mt-10 text-2xl opacity-85">体験の設計を分解してみる</div>
+<div class="mt-8 text-xl leading-10 opacity-80">名前を与えることから始まる Onboarding</div>
+<div class="mt-4 text-xl leading-10 opacity-80">普段使いのチャネルへの接続</div>
 
 ---
 layout: center
@@ -277,24 +263,21 @@ layout: default
 layout: default
 ---
 
-# カスタマイズ性
+# カスタマイズ性と危険なローカル実行
 
-- skill, plugin, cron
-- hook
-- tool
-- ACP
-- etc...
+- skill, plugin, cron, hook, tool, ACP
+- 「自分専用」に育てる余地が大きい
+- でも、ローカル実行で動かしたらなんでもできちゃう
 
-<div class="mt-8 text-2xl font-bold text-orange-700">
-「自分専用」に育てる余地が大きい
-</div>
+<div class="mt-6 text-xl font-semibold">大いなる力には、大いなる責任が伴う</div>
+<img src="../../public/decks/openclaw-what-made-it-great/dangerous-local-execution.png" class="mt-6 rounded-xl shadow border border-gray-200 max-h-[11rem] object-contain mx-auto" />
 
 ---
 layout: center
 class: text-center
 ---
 
-# 危険なローカル実行
+# それで何をやるのかは、わたしの・あなたの想像力次第
 
 <div class="mt-8 text-2xl leading-12 opacity-90">
 OpenClaw をローカル実行で動かしたら、なんでもできちゃう。
@@ -407,22 +390,15 @@ class: text-center
 # 他の人はどう使ってる？
 
 <div class="mt-6 grid grid-cols-1 gap-4">
-  <img src="../../public/decks/openclaw-what-made-it-great/community-uses.png" class="rounded-2xl shadow-lg border border-gray-200 max-h-[11rem] w-full object-contain mx-auto" />
+  <img src="../../public/decks/openclaw-what-made-it-great/community-uses.png" class="rounded-2xl shadow-lg border border-gray-200 max-h-[10rem] w-full object-contain mx-auto" />
   <div class="grid grid-cols-2 gap-4">
-    <img src="../../public/decks/openclaw-what-made-it-great/honda.png" class="rounded-xl shadow border border-gray-200 max-h-[9rem] w-full object-contain mx-auto" />
-    <img src="../../public/decks/openclaw-what-made-it-great/robot.png" class="rounded-xl shadow border border-gray-200 max-h-[9rem] w-full object-contain mx-auto" />
+    <img src="../../public/decks/openclaw-what-made-it-great/honda.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full object-contain mx-auto" />
+    <img src="../../public/decks/openclaw-what-made-it-great/robot.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full object-contain mx-auto" />
   </div>
 </div>
 
----
-layout: center
-class: text-center
----
-
-# みんな思いついたことを思い想いにやってる
-
-<div class="mt-10 text-2xl leading-12 opacity-90">
-正解は1つじゃない。<br>
+<div class="mt-6 text-xl leading-10 opacity-85">
+正解は1つじゃない。
 それぞれが自分の相棒の育て方を試している。
 </div>
 
