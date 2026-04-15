@@ -59,10 +59,10 @@ body,
 }
 </style>
 
-# OpenClaw と始める AI 生活
+# Re: OpenClaw と始める AI 生活
 
-<div class="mt-8 text-2xl opacity-80">OpenClaw は何が偉大だったのか</div>
-<div class="mt-14 text-lg opacity-60">t0yohei</div>
+<div class="mt-8 text-2xl opacity-80">~ OpenClaw は何が偉大だったのか ~</div>
+<div class="mt-14 text-lg opacity-60">t0yohei @ 五反田AI vol.2</div>
 
 ---
 layout: center
@@ -86,8 +86,6 @@ layout: center
 class: text-center
 ---
 
-# OpenClaw
-
 <img src="../../public/decks/openclaw-what-made-it-great/openclaw-logo.png" class="mt-8 w-full max-h-[16rem] object-contain mx-auto" />
 
 ---
@@ -105,6 +103,11 @@ class: text-center
 ---
 
 # OpenClaw は何が偉大だったのか
+
+---
+layout: center
+class: text-center
+---
 
 <div class="mt-10 text-2xl leading-12 font-semibold opacity-90">
 OpenClaw が与えたのは、単なる便利ツールではなく、<br>
@@ -139,7 +142,12 @@ layoutClass: gap-10
 <div>- 自分の日常に入り込める</div>
 </div>
 
-<div class="mt-8 text-lg font-semibold opacity-80">他の AI Agent とはどう違うか</div>
+---
+layout: two-cols
+layoutClass: gap-10
+---
+
+# 他の AI Agent とはどう違うか
 
 ### Claude Code などの AI Agent
 
@@ -195,6 +203,10 @@ layout: default
 
 # OpenClaw は何が特別だったのか
 
+---
+layout: default
+---
+
 <div class="mt-8 text-xl leading-10">
 <div class="font-bold">OpenClaw がやったこと</div>
 <div class="mt-4">「わたし専用の AI Agent」という概念と体験を人々に与えた</div>
@@ -210,8 +222,6 @@ class: text-center
 # どういうことか
 
 <div class="mt-10 text-2xl opacity-85">体験の設計を分解してみる</div>
-<div class="mt-8 text-xl leading-10 opacity-80">名前を与えることから始まる Onboarding</div>
-<div class="mt-4 text-xl leading-10 opacity-80">普段使いのチャネルへの接続</div>
 
 ---
 layout: center
@@ -251,6 +261,10 @@ layout: default
 
 - Brave, Ollama, 1password, github, notion, openhue, peekaboo, etc...
 - より有能なアシスタントへ
+
+---
+layout: default
+---
 
 # 記憶システム
 
@@ -320,7 +334,10 @@ layout: default
 - Mac mini (メモリ 24GB, SSD 512GB)
 - ChatGPT Pro のサブスク
 - Google Account, GitHub Account, etc...
-- アカウントは BAN されないよう気をつけてね
+
+<div class="mt-6 flex justify-center">
+  <img src="../../public/decks/openclaw-what-made-it-great/chatgpt-pro.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full max-w-[24rem] object-contain mx-auto" />
+</div>
 
 ---
 layout: default
@@ -334,9 +351,8 @@ layout: default
 - 常時起動な雑談相手
 - 外に持ち歩いたり？
 
-<div class="mt-6 grid grid-cols-2 gap-4">
-  <img src="../../public/decks/openclaw-what-made-it-great/chatgpt-pro.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full object-contain mx-auto" />
-  <img src="../../public/decks/openclaw-what-made-it-great/personal-dev-coding.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full object-contain mx-auto" />
+<div class="mt-6 flex justify-center">
+  <img src="../../public/decks/openclaw-what-made-it-great/personal-dev-coding.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full max-w-[24rem] object-contain mx-auto" />
 </div>
 
 <div class="mt-8 text-2xl font-bold text-orange-700">
