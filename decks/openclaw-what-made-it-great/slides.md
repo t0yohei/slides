@@ -137,7 +137,7 @@ class: text-center
 ---
 
 <div class="title-only">
-  <h1>🤔？</h1>
+  <h1>🤯</h1>
 </div>
 
 ---
@@ -150,8 +150,8 @@ class: text-center
 <img src="../../public/decks/openclaw-what-made-it-great/what-is-openclaw.png" class="mt-6 rounded-2xl shadow-lg border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
 
 <div class="mt-8 text-left text-lg leading-8">
-<div class="font-bold text-xl">OpenClaw は、自分のデバイス上で実行できるパーソナルAIアシスタントです。</div>
-<div class="mt-4">Slack、Discord、Line など普段使っているチャネルを通してあなたに応答します。</div>
+<div class="font-bold text-xl">OpenClaw は、普段使いのチャネルにやってくる、自分専用のパーソナルAIアシスタントです。</div>
+<div class="mt-4">Slack、Discord、Line など、いつもの場所を通してあなたに応答します。</div>
 </div>
 
 ---
@@ -159,7 +159,7 @@ layout: center
 layoutClass: gap-10
 ---
 
-# 要はパーソナルAIアシスタント
+# パーソナルAIアシスタント
 
 <ul class="mt-10 mx-auto max-w-2xl text-left text-2xl leading-[3.2rem] list-disc pl-8">
   <li>自分専用</li>
@@ -299,9 +299,9 @@ layout: two-cols-header
 
 ::right::
 
-- OpenAI などの Model へのリクエスト時に、毎回プロンプトインジェクションしてコンテキストを渡してる
-- OpenClaw 固有の prompt (skill 情報、plugin 情報、etc...)を system prompt としてインジェクション
-- User 固有の prompt (AGENT.md, MEMORY.md, SOUL.md, etc...)を user prompt としてインジェクション
+- 毎回の応答時に、必要なコンテキストをプロンプトへ組み込んでいる
+- OpenClaw 固有のルールや情報は system prompt 側へ載せる
+- User 固有の記憶や設定は user prompt や memory 側へ載せる
 
 ---
 layout: default
