@@ -109,7 +109,7 @@ layout: center
 class: text-center
 ---
 
-# Star 数がついに linux, React を超えた
+# Star 数がついに Linux, React を超えた
 
 <img src="../../public/decks/openclaw-what-made-it-great/stars.png" class="mt-6 rounded-2xl shadow-lg border border-gray-200 max-h-[24rem] w-full object-contain mx-auto" />
 
