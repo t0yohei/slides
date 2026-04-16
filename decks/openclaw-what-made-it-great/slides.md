@@ -292,12 +292,20 @@ layout: two-cols-header
 
 ::left::
 
+### 記憶システム
+
+<br>
+
 - 短期記憶としての session
 - 中期記憶としての daily memory
 - 長期記憶としての MEMORY.md
 - built in の記憶検索システム
 
 ::right::
+
+### 人格維持
+
+<br>
 
 - 毎回の応答時に、必要なコンテキストをプロンプトへ組み込んでいる
 - OpenClaw 固有のルールや情報は system prompt 側へ載せる
