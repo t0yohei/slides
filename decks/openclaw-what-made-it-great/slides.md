@@ -113,6 +113,10 @@ class: text-center
 
 <img src="../../public/decks/openclaw-what-made-it-great/stars.png" class="mt-6 rounded-2xl shadow-lg border border-gray-200 max-h-[24rem] w-full object-contain mx-auto" />
 
+<div class="mt-4 w-full text-right text-sm opacity-55">
+  Source: https://x.com/openclaw/status/2028347703621464481?s=20
+</div>
+
 ---
 layout: center
 class: text-center
@@ -345,7 +349,7 @@ class: text-center
 # 私の OpenClaw
 
 <div class="mt-6 text-2xl opacity-85">赤髪の女の子</div>
-<img src="../../public/decks/openclaw-what-made-it-great/my-openclaw.png" class="mt-8 rounded-2xl shadow-lg border border-gray-200 max-h-[18rem] w-full object-contain mx-auto" />
+<img src="../../public/decks/openclaw-what-made-it-great/my-openclaw.png" class="mt-8 rounded-xl shadow-lg border border-gray-200 max-h-[11rem] w-full object-contain mx-auto" />
 
 ---
 layout: default
@@ -421,7 +425,7 @@ class: text-center
 <div class="mt-6 grid grid-cols-1 gap-4">
   <img src="../../public/decks/openclaw-what-made-it-great/community-uses.png" class="rounded-2xl shadow-lg border border-gray-200 max-h-[10rem] w-full object-contain mx-auto" />
   <div class="grid grid-cols-2 gap-4">
-    <img src="../../public/decks/openclaw-what-made-it-great/honda.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full object-contain mx-auto" />
+    <img src="../../public/decks/openclaw-what-made-it-great/aicu-note.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full object-contain mx-auto" />
     <img src="../../public/decks/openclaw-what-made-it-great/robot.png" class="rounded-xl shadow border border-gray-200 max-h-[8rem] w-full object-contain mx-auto" />
   </div>
 </div>
@@ -429,6 +433,10 @@ class: text-center
 <div class="mt-6 text-xl leading-10 opacity-85">
 正解は1つじゃない。
 それぞれが自分の相棒の育て方を試している。
+</div>
+
+<div class="mt-4 w-full text-right text-sm opacity-55">
+  Source: https://note.com/aicu/n/ncc85d368f574
 </div>
 
 ---
