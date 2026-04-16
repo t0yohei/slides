@@ -13,9 +13,11 @@ routerMode: hash
 seoMeta:
   ogTitle: OpenClaw は何が偉大だったのか
   ogDescription: 人々の想像力を爆発させた、パーソナルAIアシスタント
+  ogImage: https://t0yohei.github.io/slides/decks/openclaw-what-made-it-great/ogp.png
   twitterCard: summary_large_image
   twitterTitle: OpenClaw は何が偉大だったのか
   twitterDescription: 人々の想像力を爆発させた、パーソナルAIアシスタント
+  twitterImage: https://t0yohei.github.io/slides/decks/openclaw-what-made-it-great/ogp.png
 ---
 
 <style>
