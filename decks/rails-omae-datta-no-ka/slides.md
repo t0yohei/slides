@@ -1,5 +1,6 @@
 ---
 theme: seriph
+published: 2026-03-20
 title: Rails、お前だったのか。
 info: |
   Cloudflare + Hono で新規開発して、Rails のレールの価値を痛感した話

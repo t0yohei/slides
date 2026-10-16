@@ -147,6 +147,25 @@ npm run deck:new -- --slug ai-agent-night --title "AI Agent Night"
 - 一覧: `https://t0yohei.github.io/slides/`
 - 例: `https://t0yohei.github.io/slides/rails-omae-datta-no-ka/`
 
+## ブログ掲載用 RSS
+
+ビルド時に `dist/feed.xml` を生成する。GitHub Pages へのデプロイ後は `https://t0yohei.github.io/slides/feed.xml` で公開され、Blog No Name のトップページに記事と並べて表示される。クリックすると公開スライドを開く。
+
+掲載する deck の先頭の frontmatter に公開日を設定する。
+
+```yaml
+title: 発表タイトル
+published: 2026-04-15
+info: |
+  発表の説明
+```
+
+`published` は `YYYY-MM-DD` 形式で記録し、編集時には変更しない。未設定の deck と `index`、`test-slide` は RSS に含めない。説明には `seoMeta.ogDescription`、`info`、タイトルの順で、最初に設定されている値を使う。
+
+既存の3本には、Git 履歴で各 deck のファイルが最初に追加された日を公開日として設定した。発表日を確認できた場合は修正する。
+
+`npm test` で RSS の掲載対象、日付順、公開 URL、XML のエスケープを検証する。
+
 ## 現在の deck
 
 - `index` - deck 一覧ページ

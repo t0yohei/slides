@@ -1,5 +1,6 @@
 ---
 theme: seriph
+published: 2026-04-15
 title: OpenClaw は何が偉大だったのか
 info: |
   人々の想像力を爆発させた、パーソナルAIアシスタント
