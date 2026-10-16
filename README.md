@@ -127,6 +127,27 @@ npm run deck:new -- --slug ai-agent-night --title "AI Agent Night"
 - `public/decks/<slug>/`
 - `decks/index/slides.md` の更新
 
+Blog No Name にも掲載する場合は、続けて次の手順で公開する。`deck:new` は公開日を自動設定しない。
+
+1. `decks/<slug>/slides.md` の先頭の frontmatter に公開日を追加する。
+
+   ```yaml
+   published: 2026-10-16
+   ```
+
+   実際の公開日を `YYYY-MM-DD` 形式で記録し、編集時には変更しない。未設定の deck はブログに掲載されない。
+
+2. RSS のテストと公開用ビルドを実行する。
+
+   ```bash
+   npm test
+   npm run build:pages
+   ```
+
+3. 変更を `main` に push するか、PR をマージする。GitHub Actions のデプロイが成功すると、RSS が更新され、ブログにも自動で掲載される。
+
+ブログ側の変更は不要。ブログのキャッシュには24時間の有効期間と、古い内容を返しながら再取得する最大24時間の期間があるため、公開直後には反映されない場合がある。タイトル・説明の設定や掲載対象の詳細は「[ブログ掲載用 RSS](#ブログ掲載用-rss)」を参照する。
+
 ## 運用ルール
 
 1. 発表本体は `decks/<slug>/slides.md`
