@@ -1,5 +1,6 @@
 ---
 theme: seriph
+published: 2026-03-28
 title: 「おはよう」から「おやすみ」まで
 info: |
   OpenClaw の家電操作で始める AI 生活

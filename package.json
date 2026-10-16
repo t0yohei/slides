@@ -11,12 +11,14 @@
     "build": "node scripts/slides.mjs build",
     "build:all": "node scripts/slides.mjs build-all",
     "build:pages": "SLIDEV_BASE_PREFIX=${SLIDEV_BASE_PREFIX:-slides} node scripts/slides.mjs build-all",
-    "export": "node scripts/slides.mjs export"
+    "export": "node scripts/slides.mjs export",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "@slidev/cli": "^52.14.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
-    "vue": "^3.5.29"
+    "vue": "^3.5.29",
+    "yaml": "^2.8.2"
   }
 }

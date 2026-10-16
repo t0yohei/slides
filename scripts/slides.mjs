@@ -2,6 +2,7 @@ import { mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync
 import { spawnSync, spawn } from 'node:child_process'
 import { createServer } from 'node:http'
 import path from 'node:path'
+import { createRssFeed } from './rss.mjs'
 
 const decksDir = path.resolve('decks')
 const defaultDeck = 'index'
@@ -75,6 +76,7 @@ function copyPublicAssets() {
   const publicDir = path.resolve('public')
   if (!existsSync(publicDir)) return
   cpSync(publicDir, distDir, { recursive: true })
+  writeFileSync(path.join(distDir, 'feed.xml'), createRssFeed(decksDir))
 }
 
 function run(command, args) {
@@ -255,6 +257,8 @@ function getContentType(filePath) {
       return 'text/css; charset=utf-8'
     case '.json':
       return 'application/json; charset=utf-8'
+    case '.xml':
+      return 'application/rss+xml; charset=utf-8'
     case '.svg':
       return 'image/svg+xml'
     case '.png':
